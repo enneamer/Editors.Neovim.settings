@@ -14,4 +14,9 @@ return function()
   vim.cmd "highlight NotifyINFOTitle guifg=#4CAF50"
   vim.cmd "highlight NotifyDEBUGTitle guifg=#9E9E9E"
   vim.cmd "highlight NotifyTRACETitle guifg=#9E9E9E"
+  vim.filetype.add {
+    extension = {
+      jinja = "jinja2",
+    },
+  }
 end
