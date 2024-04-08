@@ -13,6 +13,10 @@ vim.cmd "highlight NotifyWARNTitle guifg=#FF9800"
 vim.cmd "highlight NotifyINFOTitle guifg=#4CAF50"
 vim.cmd "highlight NotifyDEBUGTitle guifg=#9E9E9E"
 vim.cmd "highlight NotifyTRACETitle guifg=#9E9E9E"
+vim.cmd "highlight NotifyTRACETitle guifg=#9E9E9E"
+vim.cmd "highlight IlluminatedWordText gui=none cterm=none"
+vim.cmd "highlight IlluminatedWordRead gui=none cterm=none"
+vim.cmd "highlight IlluminatedWordWrite gui=none cterm=none"
 vim.filetype.add {
   extension = {
     jinja = "jinja2",
