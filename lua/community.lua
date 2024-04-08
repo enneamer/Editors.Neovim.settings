@@ -1,5 +1,6 @@
+--@type LazySpec
 return {
-  { "AstroNvim/astrocommunity", version = "v5.0.0" },
+  { "AstroNvim/astrocommunity", version = "v7.0.0" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.pack.ansible" },
@@ -20,20 +21,4 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.yaml" },
-  {
-    "jay-babu/mason-null-ls.nvim",
-    opts = function(_, opts)
-      local null_ls = require "null-ls"
-      local methods = require "null-ls.methods"
-      opts.handlers["ansiblelint"] = function(_0, _1)
-        local config = {}
-        for k, v in ipairs(null_ls.builtins.diagnostics.ansiblelint) do
-          config[k] = v
-        end
-        config["method"] = { methods.internal.DIAGNOSTICS_ON_OPEN, methods.internal.DIAGNOSTICS_ON_SAVE }
-        setmetatable(config, getmetatable(null_ls.builtins.diagnostics.ansiblelint))
-        null_ls.register(config)
-      end
-    end,
-  },
 }

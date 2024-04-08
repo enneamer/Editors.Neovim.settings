@@ -2,6 +2,9 @@ return {
   {
     "NeogitOrg/neogit",
     cmd = "Neogit",
+    keys = {
+      { "<leader>gg", "<cmd>Neogit<cr>", desc = "Neogit" },
+    },
     config = function()
       require("neogit").setup {}
       vim.cmd "highlight NeogitDiffDeleteHighlight guifg=#B71C1C guibg=#F44336"
