@@ -21,6 +21,7 @@ return {
         ["@constant.builtin"] = { fg = "#FF9800" },
         ["@namespace"] = { fg = "#3F51B5" },
         ["@string.regex"] = { fg = "#E65100" },
+        ["@keyword.exception.python"] = { fg = "#B71C1C" },
       },
       custom_colors = function(colors)
         colors.main.white = "#FFFFFF"
